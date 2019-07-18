@@ -1,0 +1,25 @@
+.login {
+    /*background-image: url("");*/
+    background-color: #FFC;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 400px;
+    height: 135px;
+    /*background-image: url("");*/
+    background-repeat: no-repeat;
+    background-color: rebeccapurple;
+}
+
+mat-list {
+    margin-left: 90px;
+    margin-right: 50px;
+}
+
+.mat-raised-button {
+    min-width: 180px;
+}

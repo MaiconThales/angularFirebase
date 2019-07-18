@@ -1,0 +1,30 @@
+.admin {
+    /*background-image: url();*/
+    background-color: #FFC;
+    min-height: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 400px;
+    height: 135px;
+    /*background-image: url();*/
+    background-color: rgb(98, 238, 79);
+    margin: auto;
+}
+
+.home {
+    position: absolute;
+    top: 90px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.perguntas-container {
+    margin: 5px;
+}
+
+.mat-table, .mat-paginator {
+    background: #FFC;
+}
