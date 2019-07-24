@@ -20,7 +20,6 @@ export class PreJogoComponent implements OnInit {
 
   sair() {
     this.afAuth.auth.signOut();
-    this.router.navigate(['login']);
   }
 
 }

@@ -4,19 +4,18 @@ import { Router } from '@angular/router';
 import { 
   MatTableDataSource, 
   MatPaginator, 
-  MatDialog, 
-  MatDialogRef 
+  MatDialog
 } from '@angular/material';
 import { environment as env } from '../../../environments/environment';
 
-import { PerguntasService } from '../../services'; //, JogoService
+import { PerguntasService, JogoService } from '../../services';
 import { Pergunta } from '../../models';
-/*import { 
+import { 
   PerguntaFormDialogComponent, 
-  ConfirmarRemoverDialogComponent,
+  ConfirmarRemoverDialogComponent, 
   ConfirmarRestauracaoDialogComponent,
   JogosFormDialogComponent
-} from './dialogs';*/
+} from './dialogs';
 
 @Component({
   selector: 'app-admin',
@@ -33,8 +32,8 @@ export class AdminComponent implements OnInit {
     private afAuth: AngularFireAuth,
   	private router: Router,
   	private dialog: MatDialog,
-  	private perguntasService: PerguntasService/*,
-    private jogoService: JogoService*/
+  	private perguntasService: PerguntasService,
+    private jogoService: JogoService
   ) { }
 
   ngOnInit() {
@@ -58,7 +57,7 @@ export class AdminComponent implements OnInit {
     this.afAuth.auth.signOut();
   }
 
-  /*cadastrar() {
+  cadastrar() {
     this.dialog
       .open(PerguntaFormDialogComponent)
       .afterClosed().subscribe(data => {
@@ -66,9 +65,9 @@ export class AdminComponent implements OnInit {
           this.perguntasService.cadastrar(data.pergunta);
         }
       });
-  }*/
+  }
 
-  /*atualizar($event: any, pergunta: Pergunta) {
+  atualizar($event: any, pergunta: Pergunta) {
     $event.preventDefault();
     this.dialog
       .open(
@@ -80,9 +79,9 @@ export class AdminComponent implements OnInit {
           this.perguntasService.atualizar(data.pergunta, data.id);
         }
       });
-  }*/
+  }
 
-  /*remover($event: any, perguntaId: string) {
+  remover($event: any, perguntaId: string) {
     $event.preventDefault();
     this.dialog.open(
       ConfirmarRemoverDialogComponent, 
@@ -93,9 +92,9 @@ export class AdminComponent implements OnInit {
         this.perguntasService.remover(data.perguntaId);
       }
     });
-  }*/
+  }
 
-  /*confirmarRestauracaoDados() {
+  confirmarRestauracaoDados() {
     this.dialog
       .open(ConfirmarRestauracaoDialogComponent)
       .afterClosed().subscribe(resposta => {
@@ -103,9 +102,9 @@ export class AdminComponent implements OnInit {
           this.perguntasService.restaurarPerguntas();
         }
       });
-  }*/
+  }
 
-  /*inicializarJogos() {
+  inicializarJogos() {
     this.dialog
       .open(JogosFormDialogComponent)
       .afterClosed().subscribe(data => {
@@ -113,6 +112,6 @@ export class AdminComponent implements OnInit {
           this.jogoService.inicializarJogos(data);
         }
       });
-  }*/
+  }
 
 }
